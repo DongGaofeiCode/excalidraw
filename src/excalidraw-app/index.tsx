@@ -102,17 +102,17 @@ window.EXCALIDRAW_THROTTLE_RENDER = true;
 
 let isSelfEmbedding = false;
 
-if (window.self !== window.top) {
-  try {
-    const parentUrl = new URL(document.referrer);
-    const currentUrl = new URL(window.location.href);
-    if (parentUrl.origin === currentUrl.origin) {
-      isSelfEmbedding = true;
-    }
-  } catch (error) {
-    // ignore
-  }
-}
+// if (window.self !== window.top) {
+//   try {
+//     const parentUrl = new URL(document.referrer);
+//     const currentUrl = new URL(window.location.href);
+//     if (parentUrl.origin === currentUrl.origin) {
+//       isSelfEmbedding = true;
+//     }
+//   } catch (error) {
+//     // ignore
+//   }
+// }
 
 const languageDetector = new LanguageDetector();
 languageDetector.init({

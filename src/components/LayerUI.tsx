@@ -28,7 +28,7 @@ import { PasteChartDialog } from "./PasteChartDialog";
 import { Section } from "./Section";
 import { HelpDialog } from "./HelpDialog";
 import Stack from "./Stack";
-import { UserList } from "./UserList";
+// import { UserList } from "./UserList";
 import { JSONExportDialog } from "./JSONExportDialog";
 import { PenModeButton } from "./PenModeButton";
 import { trackEvent } from "../analytics";
@@ -291,23 +291,23 @@ const LayerUI = ({
               )}
             </Section>
           )}
-          <div
-            className={clsx(
-              "layer-ui__wrapper__top-right zen-mode-transition",
-              {
-                "transition-right": appState.zenModeEnabled,
-              },
-            )}
-          >
-            <UserList collaborators={appState.collaborators} />
-            {renderTopRightUI?.(device.isMobile, appState)}
-            {!appState.viewModeEnabled &&
-              // hide button when sidebar docked
-              (!isSidebarDocked ||
-                appState.openSidebar?.name !== DEFAULT_SIDEBAR.name) && (
-                <tunnels.DefaultSidebarTriggerTunnel.Out />
-              )}
-          </div>
+          {/*<div*/}
+          {/*  className={clsx(*/}
+          {/*    "layer-ui__wrapper__top-right zen-mode-transition",*/}
+          {/*    {*/}
+          {/*      "transition-right": appState.zenModeEnabled,*/}
+          {/*    },*/}
+          {/*  )}*/}
+          {/*>*/}
+          {/*  <UserList collaborators={appState.collaborators} />*/}
+          {/*  {renderTopRightUI?.(device.isMobile, appState)}*/}
+          {/*  {!appState.viewModeEnabled &&*/}
+          {/*    // hide button when sidebar docked*/}
+          {/*    (!isSidebarDocked ||*/}
+          {/*      appState.openSidebar?.name !== DEFAULT_SIDEBAR.name) && (*/}
+          {/*      <tunnels.DefaultSidebarTriggerTunnel.Out />*/}
+          {/*    )}*/}
+          {/*</div>*/}
         </div>
       </FixedSideContainer>
     );
